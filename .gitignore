@@ -1,6 +1,6 @@
 # Ignore large/proprietary binaries
 burpsuite_pro.jar
-loader.jar
+
 
 # Ignore generated scripts and local configurations
 burp.sh
