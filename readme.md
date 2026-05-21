@@ -112,9 +112,6 @@ To complete the setup, place your legally obtained Java binaries directly inside
 
 Ensure `logo.png` remains in the folder to serve as the launcher's desktop icon.
 
-> [!IMPORTANT]
-> Do not upload, commit, or distribute licensed or proprietary JAR files (`loader.jar` or `burpsuite_pro.jar`) to public repositories.
-
 > [!TIP]
 > **Getting the Latest Version of Burp Suite**:
 > If you want to run the latest version of Burp Suite Professional, follow these steps:
