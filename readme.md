@@ -126,20 +126,40 @@ Ensure `logo.png` remains in the folder to serve as the launcher's desktop icon.
 
 ---
 
-## Running the Automated Setup
+### Step 4: Verify and Activate Manually
 
-Execute the installation script:
+Before running the final setup script, verify that the loader launches correctly and perform the manual license activation:
+
+1. Execute the loader jar manually:
+
+   ```bash
+   java -jar loader.jar
+   ```
+
+2. Perform the manual activation process:
+   * When the loader window opens, copy the license key.
+   * Start Burp Suite from the loader (click the Run button if available).
+   * Paste the license key into the Burp Suite prompt.
+   * Select manual activation (Offline Activation).
+   * Copy the activation request string from Burp Suite and paste it into the loader to generate the activation response.
+   * Copy the activation response string from the loader and paste it back into Burp Suite to finalize activation.
+
+3. Verify Burp Suite Professional runs successfully in its activated state, then close the application.
+
+### Step 5: Run the Setup Script
+
+After successful manual activation, run the automatic installer script to generate the permanent launcher script and configure your desktop shortcuts:
 
 ```bash
 python3 setup.py
 ```
 
-The script will automatically perform the following steps:
-1. Detect and validate the Java runtime path.
+The script will automatically perform the following operations:
+1. Detect and validate the system Java runtime path.
 2. Build the executable wrapper script (`burp.sh`).
-3. Set execution permissions for the runner scripts.
-4. Construct a custom desktop entry file (`burpsuitepro.desktop`).
-5. Register the application with the desktop environment.
+3. Apply correct execution permissions for launcher scripts.
+4. Construct the custom desktop entry file (`burpsuitepro.desktop`).
+5. Register the application shortcut with your desktop environment.
 
 ---
 
